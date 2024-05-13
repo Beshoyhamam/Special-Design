@@ -1,0 +1,48 @@
+/* Start About Us */
+.about-us {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+
+    .info-box {
+        flex: 1;
+        padding: 50px 35px 0 0;
+
+        h2 {
+            font-weight: bold;
+            font-size: 30px;
+            color: var(--main-color);
+            margin: 0 0 10px;
+        }
+
+        p {
+            line-height: 1.8;
+            color: #767676;
+            margin: 0;
+        }
+    }
+
+    .image-box {
+        flex: 1;
+        text-align: right;
+        img {
+            width: 320px;
+        }
+    }
+}
+
+@media(max-width: 767px) {
+    .about-us {
+        flex-direction: column;
+        text-align: center;
+
+        .info-box {
+            padding: 0;
+        }
+
+        .image-box {
+            text-align: inherit;
+        }
+    }
+}
+/* End About Us */

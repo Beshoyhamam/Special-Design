@@ -1,0 +1,123 @@
+/* Start Settings Box */
+.settings-box {
+    position: fixed;
+    left: -230px;
+    top: 0;
+    background-color: #FFF;
+    width: 230px;
+    z-index: 2000;
+    min-height: 100vh;
+    transition: .3s;
+    border: 1px solid #EEE;
+
+    .toggle-settings {
+        position: absolute;
+        right: -35px;
+        top: 160px;
+        background-color: var(--main-color);
+        width: 35px;
+        text-align: center;
+        cursor: pointer;
+        color: #FFF;
+
+        .gear {
+            padding: 10px 0;
+            width: 100%;
+        }
+    }
+
+    .settings-container {
+        padding: 10px;
+
+        .option-box {
+            padding: 20px;
+            text-align: center;
+            background-color: #EEE;
+            margin-bottom: 15px;
+
+            h4 {
+                margin: 0;
+                color: #666;
+                font-size: 15px;
+            }
+    
+            .colors-list {
+                list-style: none;
+                text-align: center;
+                padding: 0;
+                display: flex;
+                gap: 15px;
+    
+                li {
+                    width: 25px;
+                    height: 25px;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    opacity: .5;
+    
+                    &.active {
+                        opacity: 1;
+                        outline: 5px solid #FFF;
+                    }
+    
+                    &:first-child {
+                        background-color: #FF9800;
+                    }
+    
+                    &:nth-child(2) {
+                        background-color: #E91E63;
+                    }
+    
+                    &:nth-child(3) {
+                        background-color: #009688;
+                    }
+    
+                    &:nth-child(4) {
+                        background-color: #03A9F4;
+                    }
+    
+                    &:nth-child(5) {
+                        background-color: #4CAF50;
+                    }
+                }
+            }
+
+            .yes, .no {
+                width: 80px;
+                background-color: #009688;
+                display: inline-block;
+                width: 50px;
+                font-size: 12px;
+                color: #FFF;
+                padding: 4px 10px;
+                border-radius: 4px;
+                margin-top: 10px;
+                cursor: pointer;
+                opacity: .5;
+                font-weight: bold;
+            }
+
+            span.active {
+                opacity: 1;
+            }
+        }
+
+        .reset-options {
+            background-color: #F44336;
+            border: none;
+            width: 178px;
+            margin: 10px auto;
+            display: block;
+            color: #FFF;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+    }
+}
+
+.open {
+    left: 0;
+}
+/* End Settings Box */

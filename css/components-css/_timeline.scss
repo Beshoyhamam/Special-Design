@@ -1,0 +1,121 @@
+
+/* Start Timeline */
+.timeline {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #EEE;
+
+    .timeline-content {
+        position: relative;
+
+        &::before {
+            content: "";
+            width: 2px;
+            height: 100%;
+            background-color: var(--main-color);
+            position: absolute;
+            left: 50%;
+            margin-left: -1px;
+            top: 0;
+        }
+
+        .year {
+            margin: 20px auto;
+            width: 50px;
+            background-color: var(--main-color);
+            text-align: center;
+            color: #FFF;
+            position: relative;
+            z-index: 2;
+            border-radius: 4px;
+            padding: 2px 5px;
+            font-weight: bold;
+        }
+
+        .container-flex {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .left,
+        .right {
+            width: 100%;
+            margin-bottom: 30px;
+
+            .content {
+                width: calc(50% - 25px);
+                padding: 20px;
+                background-color: #FFF;
+                position: relative;
+
+                h3 {
+                    font-weight: bold;
+                    color: var(--main-color);
+                    margin: 0 0 10px;
+                }
+
+                p {
+                    color: #666;
+                    margin: 0;
+                    line-height: 1.6;
+                }
+            }
+        }
+
+        .right {
+            .content {
+                margin-left: auto;
+            }
+        }
+
+        .left .content::before,
+        .right .content::before {
+            content: "";
+            width: 14px;
+            height: 14px;
+            background-color: #FFF;
+            border: 3px solid var(--main-color);
+            position: absolute;
+            border-radius: 50%;
+            top: 20px;
+        }
+
+        .left .content::before {
+            right: -35px;
+        }
+
+        .right .content::before {
+            left: -35px;
+        }
+    }
+}
+/* End Timeline */
+
+@media (max-width: 767px) {
+
+    .year {
+        margin-bottom: 40px !important;
+    }
+
+    .left,
+    .right {
+        margin-bottom: 40px !important;
+
+        .content {
+            width: 100% !important;
+
+            &::before {
+                top: -30px !important;
+                left: 50% !important;
+                transform: translateX(-50%);
+            }
+        }
+    }
+
+    .cont-left {
+        .right:last-of-type {
+            margin-bottom: 0 !important;
+        }
+    }
+}

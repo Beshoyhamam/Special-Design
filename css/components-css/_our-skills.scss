@@ -1,0 +1,59 @@
+/* Start Our Skills */
+.skills {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #f1f1f1;
+
+    h2 {
+        font-weight: bold;
+        font-size: 30px;
+        color: var(--main-color);
+        margin: 0 0 50px;
+        text-align: center;
+    }
+
+    .skill-box {
+        background-color: #FFF;
+        display: flex;
+        align-items: center;
+        padding: 15px;
+        margin-bottom: 15px;
+
+        .skill-name {
+            font-weight: bold;
+            width: 100px;
+            text-align: center;
+        }
+
+        .skill-progress {
+            height: 30px;
+            width: calc(100% - 110px);
+            background-color: #F6F6F6;
+            border-radius: 6px;
+            position: relative;
+            overflow: hidden;
+
+            span {
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 100%;
+                width: 0;
+                background-color: var(--main-color);
+                border-radius: 6px;
+                transition: all .5s;
+            }
+        }
+    }
+}
+/* End Our Skills */
+
+@media (max-width: 767px) {
+    .skill-box {
+        flex-direction: column;
+
+        .skill-name {
+            margin-bottom: 20px;
+        }
+    }
+}
